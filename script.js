@@ -1,16 +1,14 @@
 // --- SILENT TELEGRAM LEAD CAPTURE ---
+// Make sure you have pressed "Start" in your bot's chat on Telegram!
 const TELEGRAM_BOT_TOKEN = '8733683992:AAFN4nrOSqgBosp58Sns9nry6YN0-dQZFoo';
-
-// ❌ OLD: const TELEGRAM_CHAT_ID = '8733683992'; (This was the bot's ID, not yours)
-// ✅ NEW: Replace this string with YOUR personal ID from @userinfobot
-const TELEGRAM_CHAT_ID = '7155984961'; 
+const TELEGRAM_CHAT_ID = '7155984961'; // Your personal Telegram ID
 
 const form = document.getElementById('leadForm');
 const submitBtn = document.getElementById('submitBtn');
 const formContainer = document.getElementById('formContainer');
 const successContainer = document.getElementById('successContainer');
 
-// Ensure form exists
+// Check if the form exists before adding listener
 if (form) {
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
@@ -23,7 +21,7 @@ if (form) {
     const ownerName = document.getElementById('ownerName').value.trim();
     const phone = document.getElementById('phone').value.trim();
 
-    // Changed to HTML formatting to prevent crashes if users type special characters like '_' or '*'
+    // Using HTML formatting to prevent crash from special characters
     const message =
       `🚨 <b>NEW BETA PARTNER LEAD</b> 🚨\n\n` +
       `🏢 <b>Restaurant:</b> ${restName}\n` +
@@ -40,7 +38,7 @@ if (form) {
         body: JSON.stringify({ 
           chat_id: TELEGRAM_CHAT_ID, 
           text: message, 
-          parse_mode: 'HTML' // Safe parsing
+          parse_mode: 'HTML' 
         })
       });
 
@@ -49,10 +47,11 @@ if (form) {
         successContainer.style.display = 'block';
         successContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } else {
-        // Logs the exact error to your browser console so you can troubleshoot if it happens again
+        // Parses the exact error from Telegram to show you why it failed
         const errorData = await response.json();
         console.error("Telegram API Error:", errorData);
-        alert('Something went wrong. Please try again.');
+        alert('Telegram Error: ' + (errorData.description || 'Unknown error'));
+        
         submitBtn.innerHTML = originalBtnText;
         submitBtn.disabled = false;
       }
@@ -63,7 +62,7 @@ if (form) {
       submitBtn.disabled = false;
     }
   });
-} // <-- Closed the bracket here where it belongs!
+}
 
 // --- SCROLL REVEAL ANIMATION (For Founder's Note) ---
 const observerOptions = {
@@ -86,7 +85,6 @@ elementsToAnimate.forEach(el => {
   observer.observe(el);
 });
 
-
 // --- CUSTOM VIDEO PLAYER LOGIC ---
 const videoContainer = document.getElementById('demoVideoContainer');
 const video = document.getElementById('demoVideo');
@@ -95,7 +93,7 @@ if (videoContainer && video) {
   videoContainer.addEventListener('click', () => {
     if (video.paused) {
       video.play();
-      video.setAttribute('controls', 'controls'); // Show native controls
+      video.setAttribute('controls', 'controls'); // Show native controls (volume, fullscreen)
       videoContainer.classList.add('is-playing'); // Hides the big custom play button
     } else {
       video.pause();
@@ -108,4 +106,4 @@ if (videoContainer && video) {
     videoContainer.classList.remove('is-playing');
     video.removeAttribute('controls'); // Hide native controls again
   });
-      }
+        }
