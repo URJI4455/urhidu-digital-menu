@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URHIDU | Digital Menu Program for Restaurants & Cafés</title>
+  <meta name="description" content="URHIDU builds Ethiopian restaurants and cafés a free, done-for-you digital menu. Join the Digital Menu Program — 15 spots only.">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  <!-- Premium Fonts: Playfair Display, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- External JS -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand">
+    <img src="logo.png" alt="URHIDU" class="brand-logo">
+    <div>
+      <span class="brand-word">URHIDU</span>
+      <span class="brand-tag">Digital Menu Program</span>
+    </div>
+  </div>
+  <a href="#formContainer" class="btn btn-primary">Claim Free Spot</a>
+</header>
+
+<section class="hero-photo">
+  <img src="founder.png" alt="URHIDU Founder" class="hero-photo-img">
+  <div class="hero-photo-overlay"></div>
+
+  <div class="hero-photo-text">
+    <h1>Food prices are changing fast. <br><em>Get a premium digital menu that updates instantly—100% Free.</em></h1>
+    <a href="#formContainer" class="btn btn-primary">Claim Your Free Spot <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+</section>
+
+<div class="section wrap" style="padding-top:2.2rem; padding-bottom:0;">
+  <div class="hero-stats">
+    <span><i class="fa-solid fa-birr-sign"></i>Zero Setup Cost</span>
+    <span><i class="fa-solid fa-bolt"></i>12 Months Free</span>
+    <span><i class="fa-solid fa-gift"></i>10K Value Worth</span>
+  </div>
+
+  <div class="spot-tracker">
+    <div class="spot-tracker-head">
+      <span class="mono-label">Digital Menu Program Spots</span>
+      <span class="spot-count"><strong>8</strong> of 15 remaining</span>
+    </div>
+    <div class="spot-bar" role="img" aria-label="7 of 15 digital menu spots taken, 8 remaining">
+      <span class="spot-seg filled"></span><span class="spot-seg filled"></span><span class="spot-seg filled"></span>
+      <span class="spot-seg filled"></span><span class="spot-seg filled"></span><span class="spot-seg filled"></span>
+      <span class="spot-seg filled"></span>
+      <span class="spot-seg open"></span><span class="spot-seg open"></span><span class="spot-seg open"></span>
+      <span class="spot-seg open"></span><span class="spot-seg open"></span><span class="spot-seg open"></span>
+      <span class="spot-seg open"></span><span class="spot-seg open"></span>
+    </div>
+  </div>
+</div>
+
+<!-- Ticker -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span class="marquee-item"><i class="fa-solid fa-utensils"></i>For Restaurants &amp; Cafés</span>
+    <span class="marquee-item"><i class="fa-solid fa-gift"></i>10,000 ETB Value — Yours Free</span>
+    <span class="marquee-item"><i class="fa-solid fa-arrow-trend-up"></i>Increase Your Sales</span>
+    <span class="marquee-item"><i class="fa-solid fa-qrcode"></i>Ditch the Dirty Paper Menu</span>
+    <span class="marquee-item"><i class="fa-solid fa-utensils"></i>For Restaurants &amp; Cafés</span>
+    <span class="marquee-item"><i class="fa-solid fa-gift"></i>10,000 ETB Value — Yours Free</span>
+    <span class="marquee-item"><i class="fa-solid fa-arrow-trend-up"></i>Increase Your Sales</span>
+    <span class="marquee-item"><i class="fa-solid fa-qrcode"></i>Ditch the Dirty Paper Menu</span>
+  </div>
+</div>
+
+<main>
+  <!-- Demo video -->
+  <div class="section wrap">
+    <div class="video-card" id="demoVideoContainer">
+      <span class="video-card-label">7-Second </span>
+      <!-- Replace 'your-ad.mp4' with your actual video file name -->
+      <video id="demoVideo" class="demo-video" playsinline poster="thumb.png">
+        <source src="ad.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="play-btn" id="playBtn"><i class="fa-solid fa-play"></i></div>
+    </div>
+  </div>
+
+  <!-- Who Is This Program For? -->
+  <div class="section wrap">
+    <h2 class="center" style="font-size:clamp(1.7rem,4vw,2.3rem); margin-bottom:1.6rem;">Who Is This Digital Menu Program For?</h2>
+    <div class="grid-2">
+      <div class="card">
+        <i class="fa-solid fa-bell-concierge card-icon"></i>
+        <h3>Premium Restaurants</h3>
+        <p>Tired of waiters running back and forth to say a dish is "finished"? A stained paper menu looks cheap, and guests keep asking what the food even looks like.</p>
+        <ul>
+          <li><i class="fa-solid fa-check-circle"></i>Hide out-of-stock items instantly.</li>
+          <li><i class="fa-solid fa-check-circle"></i>Mouth-watering photos upsell for you.</li>
+          <li><i class="fa-solid fa-check-circle"></i>Elevate your restaurant first impression.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-mug-hot card-icon"></i>
+        <h3>Busy Cafés</h3>
+        <p>Coffee prices move often, and reprinting menus every month eats your margin. Paper menus get stained with coffee rings, ruining the experience.</p>
+        <ul>
+          <li><i class="fa-solid fa-check-circle"></i>Change prices in 1 second, for free.</li>
+          <li><i class="fa-solid fa-check-circle"></i>Zero paper waste or printing costs.</li>
+          <li><i class="fa-solid fa-check-circle"></i>1-tap WiFi and payment access for your guests.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Old Way vs. New Way Comparison -->
+  <div class="section wrap" id="comparison">
+    <h2 class="center" style="font-size:clamp(1.7rem,4vw,2.3rem); margin-bottom:1.6rem;">Why Paper Menus Are Costing You Money</h2>
+    <div class="grid-2">
+      <!-- The Old Way (Bad) -->
+      <div class="card card-old">
+        <i class="fa-solid fa-book-open card-icon-bad"></i>
+        <h3>The Old Way (Paper)</h3>
+        <ul class="compare-list bad-list">
+          <li><i class="fa-solid fa-xmark"></i> <span><strong>Expensive:</strong> Costs hundreds to reprint every time inflation pushes prices up.</span></li>
+          <li><i class="fa-solid fa-xmark"></i> <span><strong>Unsanitary:</strong> Gets stained with coffee and soup, and the paper may tear</span></li>
+          <li><i class="fa-solid fa-xmark"></i> <span><strong>Frustrating:</strong> Guests order items only to be told by the waiter, "Sorry, it's finished."</span></li>
+          <li><i class="fa-solid fa-xmark"></i> <span><strong>Boring:</strong> Text-only pages leave guests guessing what the food actually looks like.</span></li>
+        </ul>
+      </div>
+
+      <!-- The URHIDU Way (Good) -->
+      <div class="card card-new">
+        <i class="fa-solid fa-mobile-screen card-icon-good"></i>
+        <h3>The URHIDU Way</h3>
+        <ul class="compare-list good-list">
+          <li><i class="fa-solid fa-check"></i> <span><strong>Free Updates:</strong> Change prices or add new dishes in 1 minute, for absolutely zero cost.</span></li>
+          <li><i class="fa-solid fa-check"></i> <span><strong>100% Clean:</strong> Guests scan a QR code and browse safely from their own screens.</span></li>
+          <li><i class="fa-solid fa-check"></i> <span><strong>Live Inventory:</strong> Hide out-of-stock items instantly with a single tap.</span></li>
+          <li><i class="fa-solid fa-check"></i> <span><strong>Profitable:</strong> Mouth-watering, high-resolution photos make guests crave and order more.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- How Setup Works -->
+  <div class="section wrap" id="how-it-works">
+    <h2 class="center" style="font-size:clamp(1.7rem,4vw,2.3rem); margin-bottom:1.6rem;">How Setup Works</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">1</span>
+        <div>
+          <h3>Snap a Photo on Telegram</h3>
+          <p>Don't type anything. Just take a picture of your current paper menu with your phone, send it to our Telegram after you save your spot, and go back to running your restaurant.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">2</span>
+        <div>
+          <h3>We Build It</h3>
+          <p>We design and upload your full digital menu with photos and pricing — live within 7 business days.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">3</span>
+        <div>
+          <h3>You Go Live</h3>
+          <p>Place your QR code on the table and start impressing guests — update anything, anytime.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Qualification -->
+  <div class="section wrap">
+    <div class="qual-card">
+      <h3><i class="fa-solid fa-gem" style="color:var(--amber); margin-right:0.5rem;"></i>Do You Qualify for the DM program?</h3>
+      <p>To keep the guest experience flawless, we're partnering exclusively with places that meet two criteria:</p>
+      <ul class="criteria-list">
+        <li><i class="fa-solid fa-check-double"></i>You care about a high-end visual presentation for your food.</li>
+        <li><i class="fa-solid fa-wifi"></i>You provide free customer WiFi — guests shouldn't burn their own data to view a premium menu. Simply the restaurant should have Wi-fi</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- Founder's Note with Medium Animation -->
+  <div class="section wrap" style="padding-top: 1rem;">
+    <div class="founder-card scroll-animate">
+      <div class="founder-image-wrapper">
+        <!-- Replace 'founder-profile.jpg' with a square/portrait photo of you -->
+        <img src="founder-2.png" alt="URHIDU Founder" class="founder-img">
+        <div class="founder-glow"></div>
+      </div>
+      <div class="founder-content">
+        <h3 class="founder-title">Why... The Digital Menu</h3>
+        <p class="founder-quote">"Hi, I'm Urji Abdurahman. I prepared the URHIDU Digital Menu Program because I was tired of seeing incredible Ethiopian restaurants lose money printing paper menus every time inflation hit. I thought to modernize our hospitality in our country for the better customer satisfaction."</p>
+        <p class="founder-quote">"That's why I'm giving this 10,000 ETB system away for free to our first 15 partners."</p>
+        <div class="founder-signature">— Urji Abdurahman</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- FAQ -->
+  <div class="section wrap">
+    <h2 class="center" style="font-size:clamp(1.7rem,4vw,2.3rem); margin-bottom:1.6rem;">Frequently Asked Questions</h2>
+    <details>
+      <summary>Is this digital menu really free?</summary>
+      <div class="faq-body">Yes. The first 15 restaurants selected for the URHIDU Digital Menu Program get one full year of access entirely free — no setup fees, no hidden costs. In exchange, we ask for your honest feedback on how it performs in your venue.</div>
+    </details>
+    <details>
+      <summary>What exactly is a digital menu?</summary>
+      <div class="faq-body">It replaces your printed menu book. Guests scan a QR code on their table with their phone camera, and it instantly opens a beautiful, dark-mode catalog of your food.</div>
+    </details>
+    <details>
+      <summary>Why is it useful for my restaurant or café?</summary>
+      <div class="faq-body">People eat with their eyes — quality photos are proven to drive bigger orders. You also save thousands of Birr by never reprinting menus every time a price or item changes.</div>
+    </details>
+    <details>
+      <summary>Will this consume my customers' mobile data?</summary>
+      <div class="faq-body">Not at all. We provide a custom QR code that can instantly connect your guests to your restaurant's free WiFi *before* opening the menu, ensuring a fast, premium, and data-free experience for them.</div>
+    </details>
+    <details>
+      <summary>Do I update prices myself, or does someone manage it?</summary>
+      <div class="faq-body">As a URHIDU Digital Menu Partner, our team uploads your initial menu and photos for you. No worries. Our team give 12 months support for your restaurant including price update and etc.</div>
+    </details>
+    <details>
+      <summary>How do I claim my free spot?</summary>
+      <div class="faq-body">Fill out the form below. Our team reviews it and calls you shortly after to confirm your spot and schedule setup.</div>
+    </details>
+  </div>
+
+  <!-- Lead form -->
+  <div class="section wrap">
+    <div class="form-card" id="formContainer">
+      <h3>Claim Your Partner Spot</h3>
+      <p class="form-sub" style=" color: var(--amber); font-weight: 600;">We are selecting only 15 premier venues in Ethiopia to pilot this technology. Will you be one of them?</p>
+      <p class="form-sub" style="margin-top: -10px;">Lock in 1 year of premium access (10,000 ETB value) — completely free.</p>
+      
+      <!--
+      <div class="dfy-box">
+        <h4><i class="fa-solid fa-wand-magic-sparkles"></i> Zero Setup Required</h4>
+        <p>Send us a photo of your paper menu — our team builds your entire digital platform in 24 hours. You lift zero fingers.</p>
+      </div> -->
+      
+      <form id="leadForm">
+        <div class="form-group">
+          <label for="restaurantName">Restaurant or Café Name</label>
+          <input type="text" id="restaurantName" placeholder="e.g., Your Restaurant" required>
+        </div>
+        <div class="form-group">
+          <label for="ownerName">Your Name (Owner / Manager)</label>
+          <input type="text" id="ownerName" placeholder="e.g., Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="e.g., 0911 ** ** **" required>
+        </div>
+        <button type="submit" class="btn-submit" id="submitBtn">
+          Apply For Free<i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </form>
+      <p class="risk-line"><i class="fa-solid fa-shield-halved"></i>No hidden fees.   Just for free.</p>
+    </div>
+
+    <div class="form-card success-card" id="successContainer">
+      <i class="fa-solid fa-circle-check"></i>
+      <h3>Application Received!</h3>
+      <p>Welcome to the URHIDU Digital Menu  Program. We've got your details and we will call you in 7 business days to set up your free digital menu.</p>
+    </div>
+  </div>
+
+
+</main>
+
+<a href="tel:+251989954455" class="fab-call" aria-label="Call Support">
+  <i class="fa-solid fa-phone"></i>
+</a>
+
+<footer>
+  © 2026 URHIDU TECHNOLOGIES
+  <span> Made for Ethiopia's Restaurant </span>
+</footer>
+
+</body>
+</html>
