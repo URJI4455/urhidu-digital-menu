@@ -1,7 +1,7 @@
 // --- SILENT TELEGRAM LEAD CAPTURE ---
 // Replace these with your actual bot credentials from BotFather
 const TELEGRAM_BOT_TOKEN = '8733683992:AAFN4nrOSqgBosp58Sns9nry6YN0-dQZFoo';
-const TELEGRAM_CHAT_ID = '@urhidu_dmp_bot';
+const TELEGRAM_CHAT_ID = '8733683992';
 
 const form = document.getElementById('leadForm');
 const submitBtn = document.getElementById('submitBtn');
