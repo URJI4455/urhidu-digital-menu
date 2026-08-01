@@ -1,14 +1,16 @@
 // --- SILENT TELEGRAM LEAD CAPTURE ---
-// Replace these with your actual bot credentials from BotFather
 const TELEGRAM_BOT_TOKEN = '8733683992:AAFN4nrOSqgBosp58Sns9nry6YN0-dQZFoo';
-const TELEGRAM_CHAT_ID = '8733683992';
+
+// ❌ OLD: const TELEGRAM_CHAT_ID = '8733683992'; (This was the bot's ID, not yours)
+// ✅ NEW: Replace this string with YOUR personal ID from @userinfobot
+const TELEGRAM_CHAT_ID = '7155984961'; 
 
 const form = document.getElementById('leadForm');
 const submitBtn = document.getElementById('submitBtn');
 const formContainer = document.getElementById('formContainer');
 const successContainer = document.getElementById('successContainer');
 
-// Check if the form exists before adding listener (good practice for separated JS)
+// Ensure form exists
 if (form) {
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
@@ -21,12 +23,13 @@ if (form) {
     const ownerName = document.getElementById('ownerName').value.trim();
     const phone = document.getElementById('phone').value.trim();
 
+    // Changed to HTML formatting to prevent crashes if users type special characters like '_' or '*'
     const message =
-      `🚨 *NEW BETA PARTNER LEAD* 🚨\n\n` +
-      `🏢 *Restaurant:* ${restName}\n` +
-      `👤 *Manager:* ${ownerName}\n` +
-      `📞 *Phone:* ${phone}\n\n` +
-      `_Source: URHIDU Digital Menu Program Landing Page_`;
+      `🚨 <b>NEW BETA PARTNER LEAD</b> 🚨\n\n` +
+      `🏢 <b>Restaurant:</b> ${restName}\n` +
+      `👤 <b>Manager:</b> ${ownerName}\n` +
+      `📞 <b>Phone:</b> ${phone}\n\n` +
+      `<i>Source: URHIDU Digital Menu Program Landing Page</i>`;
 
     const telegramUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
@@ -34,7 +37,11 @@ if (form) {
       const response = await fetch(telegramUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: message, parse_mode: 'Markdown' })
+        body: JSON.stringify({ 
+          chat_id: TELEGRAM_CHAT_ID, 
+          text: message, 
+          parse_mode: 'HTML' // Safe parsing
+        })
       });
 
       if (response.ok) {
@@ -42,19 +49,23 @@ if (form) {
         successContainer.style.display = 'block';
         successContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } else {
+        // Logs the exact error to your browser console so you can troubleshoot if it happens again
+        const errorData = await response.json();
+        console.error("Telegram API Error:", errorData);
         alert('Something went wrong. Please try again.');
         submitBtn.innerHTML = originalBtnText;
         submitBtn.disabled = false;
       }
     } catch (error) {
+      console.error("Network Error:", error);
       alert('Network error. Please check your connection.');
       submitBtn.innerHTML = originalBtnText;
       submitBtn.disabled = false;
     }
   });
-  
-  
-  // --- SCROLL REVEAL ANIMATION (For Founder's Note) ---
+} // <-- Closed the bracket here where it belongs!
+
+// --- SCROLL REVEAL ANIMATION (For Founder's Note) ---
 const observerOptions = {
   root: null,
   rootMargin: '0px',
@@ -76,8 +87,6 @@ elementsToAnimate.forEach(el => {
 });
 
 
-
-
 // --- CUSTOM VIDEO PLAYER LOGIC ---
 const videoContainer = document.getElementById('demoVideoContainer');
 const video = document.getElementById('demoVideo');
@@ -86,7 +95,7 @@ if (videoContainer && video) {
   videoContainer.addEventListener('click', () => {
     if (video.paused) {
       video.play();
-      video.setAttribute('controls', 'controls'); // Show native controls (volume, fullscreen)
+      video.setAttribute('controls', 'controls'); // Show native controls
       videoContainer.classList.add('is-playing'); // Hides the big custom play button
     } else {
       video.pause();
@@ -99,9 +108,4 @@ if (videoContainer && video) {
     videoContainer.classList.remove('is-playing');
     video.removeAttribute('controls'); // Hide native controls again
   });
-}
-  
-  
-  
-  
-}
+      }
